@@ -3,6 +3,21 @@ body {
     /* padding-top: 70px; */
 }
 
+/* Navbar Toggler Button */
+.navbar-toggler {
+    border: 1px solid #000; /* Black border */
+    background-color: #fff; /* White background */
+    border-radius: 0.25rem; /* Rounded corners */
+    padding: 0.5rem; /* Padding around the button */
+}
+
+/* Toggler Icon (Hamburger Menu) */
+.navbar-toggler-icon {
+    background-image: url('img/hamburger.png'); /* Remove the default icon background */
+}
+
+
+
 .navbar {
     margin-bottom: 0;
     background-color: rgb(202, 90, 20);
@@ -46,6 +61,9 @@ body {
     background-color: rgb(202, 90, 20); /* Blue background for active dropdown item */
     color: black; /* White text color */
 }
+
+
+
 
 .jumbotron {
     background: url('img/coverPhoto.JPG') no-repeat center center;
