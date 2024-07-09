@@ -11,7 +11,7 @@
 </head>
 <body>
     <!-- Navigation Bar -->
-     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+     <nav class="navbar navbar-expand-lg fixed-top">
         <a class="navbar-brand" href="#">GolijaTrail 2024</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -19,7 +19,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
+                    <a class="nav-link" href="#about">O nama</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -34,10 +34,10 @@
                     <a class="nav-link" href="faq.html">FAQ</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#register">Register</a>
+                    <a class="nav-link" href="#register">Prijavi se</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
+                    <a class="nav-link" href="#contact">Kontakt</a>
                 </li>
             </ul>
         </div>
@@ -47,8 +47,9 @@
     <!-- Header Section -->
     <header class="jumbotron text-center d-flex align-items-center">
         <div class="container">
-            <h1 class="display-4">Welcome to GolijaTrail 2024</h1>
-            <p class="lead">Join us for an exciting adventure in the beautiful Golija mountains.</p>
+            <h1 class="display-4">GolijaTrail 2024</h1>
+            <p class="lead">Doživi Goliju na jedinstven način</p>
+            <p class="lead" style="font-size: 2.5rem;">7. septembar 2024. - Odvraćenica, Golija</p>
             <a class="btn btn-primary btn-lg" href="#register" role="button">Prijavi se</a>
         </div>
     </header>
@@ -57,11 +58,11 @@
     <section id="about" class="container">
         <div class="row">
             <div class="col-md-6">
-                <h2>About GolijaTrail</h2>
-                <p>GolijaTrail is an annual trail running event that takes place in the stunning Golija mountains...</p>
+                <h2>O trci</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem atque corrupti quos ratione earum sed molestiae laborum, minima at quisquam doloremque quasi quaerat accusantium neque iste, doloribus consequuntur eveniet quae.</p>
             </div>
             <div class="col-md-6">
-                <img src="" class="img-fluid" alt="About GolijaTrail">
+                <img src="img/ras.jpg" class="img-fluid img-ras" alt="About GolijaTrail">
             </div>
         </div>
     </section>
@@ -69,48 +70,60 @@
     <!-- Schedule Section -->
     <section id="schedule" class="bg-light py-5">
         <div class="container">
-            <h2 class="text-center">Event Schedule</h2>
+            <h2 class="text-center">Satnica</h2>
             <div class="row">
                 <div class="col-md-12">
                     <ul class="list-group">
-                        <li class="list-group-item">Friday, July 10th - Opening Ceremony</li>
-                        <li class="list-group-item">Saturday, July 11th - Race Day</li>
-                        <li class="list-group-item">Sunday, July 12th - Closing Ceremony</li>
+                        <li class="list-group-item">Petak, 6. septembar - Preuzimanje startnih paketa</li>
+                        <li class="list-group-item">Subota, 7. septembar do 9h preuzimanje paketa </li>
+                        <li class="list-group-item">Subota, 7. septembar 10h - start trke</li>
+                        <li class="list-group-item">Subota, 7. septembar 15h - dodela priznanja</li>
                     </ul>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Registration Section -->
-    <section id="register" class="container py-5">
-        <h2 class="text-center">Register Now</h2>
-        <form>
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" required>
+        <div class="container mt-5">
+            <h2 class="text-center">Lokacija</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1116.5731603466697!2d20.338773450441032!3d43.27787434185815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4757d2480792caf5%3A0x7b3dec9990fc8935!2z0LLQuNC70LAg0IjQtdC70LAg0JPQvtC70LjRmNCw!5e1!3m2!1ssr!2srs!4v1720558641646!5m2!1ssr!2srs"
+                        width="100%" 
+                        height="450" 
+                        style="border: 0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" required>
-            </div>
-            <div class="form-group">
-                <label for="category">Category</label>
-                <select class="form-control" id="category">
-                    <option>5K</option>
-                    <option>10K</option>
-                    <option>Half Marathon</option>
-                </select>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+        </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="bg-light py-5">
+    <section id="contact" class="py-5">
         <div class="container">
-            <h2 class="text-center">Contact Us</h2>
-            <p class="text-center">For more information, please email us at info@golijatrail.com</p>
+            <h2 class="text-center">Kontaktirajte nas</h2>
+            <!-- <p class="text-center">Get in touch with us for more information.</p> -->
+            <form id="contactForm" action="send_message.php" method="POST">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="name">Ime</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Vase ime" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Vas email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Naslov</label>
+                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Naslov" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Poruka</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" placeholder="Vasa poruka za nas" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Posalji poruku</button>
+                <div id="formMessage" class="mt-3"></div>
+            </form>
         </div>
     </section>
 

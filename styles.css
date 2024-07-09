@@ -5,7 +5,46 @@ body {
 
 .navbar {
     margin-bottom: 0;
-    background-color: orange;
+    background-color: rgb(202, 90, 20);
+}
+
+/* Navbar brand color */
+.navbar-brand {
+    color: black !important; /* White text color */
+}
+
+/* Navbar links color */
+.navbar-nav .nav-link {
+    color: black !important; /* White text color */
+}
+
+/* Navbar links active color */
+.navbar-nav .nav-link.active {
+    color: black !important; /* Blue text color for active link */
+}
+
+.navbar-nav .nav-link:hover{
+    color: rgb(230, 163, 48) !important; /* Blue text color for active link */
+}
+
+/* Navbar dropdown items */
+.navbar-nav .dropdown-menu{
+    background-color: rgb(202, 90, 20); /* Same dark background color */
+    /* border: 1px,solid, black; */
+}
+
+.navbar-nav .dropdown-item {
+    color: black; /* White text color */
+}
+
+.navbar-nav .dropdown-item:hover {
+    background-color: rgb(227, 157, 114); /* Darker background on hover */
+    color: black; /* Keep text color white */
+}
+
+.navbar-nav .dropdown-item.active {
+    background-color: rgb(202, 90, 20); /* Blue background for active dropdown item */
+    color: black; /* White text color */
 }
 
 .jumbotron {
@@ -24,15 +63,11 @@ body {
 }
 
 .jumbotron h1 {
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 .jumbotron p {
     font-size: 1.5rem;
-}
-
-#about img {
-    max-width: 100%;
 }
 
 footer {
@@ -42,4 +77,44 @@ footer {
 .accordion-button:not(.collapsed) {
     color: #007bff;
     background-color: #e9ecef;
+}
+
+.map-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    margin-top: 20px;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.jumbotron::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+    z-index: 1;
+}
+
+.jumbotron .container {
+    position: relative;
+    z-index: 2; /* Ensure the text is above the overlay */
+}
+
+.img-ras {
+    max-width: 80%; /* Maximum width of the image */
+    max-height: 80%; /* Maximum height of the image */
+    object-fit: contain; /* Scale image to fit within max dimensions while maintaining aspect ratio */
+    border-radius: 0.5rem; /* Rounded corners */
+    display: block; /* Ensure the image respects the dimensions */
+    margin: 0 auto; /* Center the image */
 }
