@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    /* padding-top: 70px; */
+}
+
+.navbar {
+    margin-bottom: 0;
+    background-color: orange;
+}
+
+.jumbotron {
+    background: url('img/coverPhoto.JPG') no-repeat center center;
+    background-size: cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.jumbotron .container{
+    text-align: center;
+}
+
+.jumbotron h1 {
+    font-size: 3rem;
+}
+
+.jumbotron p {
+    font-size: 1.5rem;
+}
+
+#about img {
+    max-width: 100%;
+}
+
+footer {
+    background: #000000;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #007bff;
+    background-color: #e9ecef;
+}
