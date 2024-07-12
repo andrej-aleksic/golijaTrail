@@ -181,3 +181,49 @@ footer {
 .faq a:hover {
     text-decoration: underline;
 }
+
+
+
+
+
+
+
+.awards {
+    padding: 40px 0;
+    background-color: #f8f9fa; /* Light grey background */
+}
+
+.awards h2 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #20232a;
+}
+
+.award-item {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.award-item ul{
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.award-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.award-item h5 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.award-item p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #555;
+}
