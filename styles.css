@@ -21,6 +21,7 @@ body {
 .navbar {
     margin-bottom: 0;
     background-color: rgb(202, 90, 20);
+    z-index: 1000;
 }
 
 /* Navbar brand color */
@@ -66,7 +67,7 @@ body {
 
 
 .jumbotron {
-    background: url('img/coverPhoto.JPG') no-repeat center center;
+    background: url('img/coverPhoto-1.JPG') no-repeat center center;
     background-size: cover;
     height: 80vh;
     display: flex;
@@ -78,14 +79,16 @@ body {
 
 .jumbotron .container{
     text-align: center;
+
 }
 
 .jumbotron h1 {
-    font-size: 4rem;
+    font-size: 3.7rem;
+
 }
 
 .jumbotron p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 footer {
@@ -112,16 +115,16 @@ footer {
     height: 100%;
 }
 
-.jumbotron::before {
+/* .jumbotron::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 80vh;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+    height: 88vh;
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1;
-}
+} */
 
 .jumbotron .container {
     position: relative;
@@ -135,4 +138,46 @@ footer {
     border-radius: 0.5rem; /* Rounded corners */
     display: block; /* Ensure the image respects the dimensions */
     margin: 0 auto; /* Center the image */
+}
+
+
+
+
+
+
+.faq {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.faq h2 {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #20232a;
+}
+
+.faq ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.faq li h5 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.faq li p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.faq a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.faq a:hover {
+    text-decoration: underline;
 }
