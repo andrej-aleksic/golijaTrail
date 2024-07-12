@@ -93,6 +93,7 @@ body {
 
 footer {
     background: #000000;
+    color: #e9ecef;
 }
 
 .accordion-button:not(.collapsed) {
