@@ -61,7 +61,7 @@ body {
 }
 
 .jumbotron {
-    background: url('img/coverPhoto-1.JPG') no-repeat center center;
+    background: url('img/coverPhoto-scaled.jpg') no-repeat center center;
     background-size: cover;
     height: 80vh;
     display: flex;
