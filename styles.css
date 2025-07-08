@@ -61,17 +61,29 @@ body {
 }
 
 .jumbotron {
-    background: url('img/coverPhoto-scaled.jpg') no-repeat center center;
+    background: url('img/photoCover.jpg') no-repeat center center;
     background-size: cover;
-    height: 80vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.jumbotron::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.6); /* Adjust opacity for desired darkness */
+    z-index: 1;
 }
 
 .jumbotron .container{
     text-align: center;
+    position: relative;
+    z-index: 2;
 }
 
 .jumbotron h1 {
