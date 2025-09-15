@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rezultati - GolijaTrail 2025</title>
+  <link rel="icon" type="image/x-icon" href="/img/raceLogo.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* malo prostora da tabela ne bude odmah ispod fiksnog navbar-a */
+    .content-container { margin-top: 120px; margin-bottom: 60px; }
+    table th { white-space: nowrap; }
+    .nav-tabs .nav-link {
+  color: #000 !important; /* crni tekst na svim tabovima */
+}
+
+.nav-tabs .nav-link.active {
+  color: #000 !important;            /* crni tekst na aktivnom tabu */
+  background-color: #f8f9fa !important; /* svetlosiva pozadina */
+  border-color: #dee2e6 #dee2e6 #fff;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar (isto kao u index.html) -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="img/raceLogoWithStroke.png" alt="GolijaTrail Logo" style="height:60px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="index.html#about">O nama</a>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Staze
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="malaStaza.html">Mala staza</a>
+                      <a class="dropdown-item" href="velikaStaza.html">Velika staza</a>
+                  </div>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="faq.html">FAQ</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="smestaj.html">Smeštaj</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="rezultati.html">Rezultati</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="index.html#contact">Kontakt</a>
+              </li>
+          </ul>
+      </div>
+  </nav>
+
+  <!-- Glavni sadržaj -->
+  <div class="container content-container">
+    <h1 class="text-center mb-4">Rezultati GolijaTrail 2025</h1>
+
+    <!-- Tabovi -->
+    <ul class="nav nav-tabs" id="resultsTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="m17-tab" data-toggle="tab" href="#m17" role="tab" aria-controls="m17" aria-selected="true">Muškarci 17km</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="z17-tab" data-toggle="tab" href="#z17" role="tab" aria-controls="z17" aria-selected="false">Žene 17km</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="m7-tab" data-toggle="tab" href="#m7" role="tab" aria-controls="m7" aria-selected="false">Muškarci 7km</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="z7-tab" data-toggle="tab" href="#z7" role="tab" aria-controls="z7" aria-selected="false">Žene 7km</a>
+      </li>
+    </ul>
+
+    <!-- Sadržaj tabova -->
+    <div class="tab-content mt-4">
+      <div class="tab-pane fade show active" id="m17" role="tabpanel" aria-labelledby="m17-tab">
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered" id="table-m17"></table>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="z17" role="tabpanel" aria-labelledby="z17-tab">
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered" id="table-z17"></table>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="m7" role="tabpanel" aria-labelledby="m7-tab">
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered" id="table-m7"></table>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="z7" role="tabpanel" aria-labelledby="z7-tab">
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered" id="table-z7"></table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer (isto kao u index.html) -->
+  <footer class="text-center py-4 footer-fixed-bottom">
+      <p>&copy; 2025 GolijaTrail. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Skripte -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+
+  <script>
+    // očekivane kolone u CSV fajlovima (redosled prikaza)
+    const COLUMNS = ['Plasman','Startni broj','Ime','Prezime','Klub','Vreme'];
+
+    function renderTableFromData(tableEl, data) {
+      tableEl.innerHTML = '';
+
+      // THEAD
+      const thead = document.createElement('thead');
+      const headRow = document.createElement('tr');
+      COLUMNS.forEach(col => {
+        const th = document.createElement('th');
+        th.textContent = col;
+        headRow.appendChild(th);
+      });
+      thead.appendChild(headRow);
+      tableEl.appendChild(thead);
+
+      // TBODY
+      const tbody = document.createElement('tbody');
+      data.forEach(row => {
+        const tr = document.createElement('tr');
+        COLUMNS.forEach(col => {
+          const td = document.createElement('td');
+          // sigurnosno: ako je header malo drugačiji, pokušaj pronaći key case-insensitive
+          let value = '';
+          if (row.hasOwnProperty(col)) {
+            value = row[col];
+          } else {
+            // pokušaj naći key koji odgovara ignorisanjem razmaka/veličine slova
+            const foundKey = Object.keys(row).find(k => k.replace(/\s+/g,'').toLowerCase() === col.replace(/\s+/g,'').toLowerCase());
+            value = foundKey ? row[foundKey] : '';
+          }
+          td.textContent = value;
+          tr.appendChild(td);
+        });
+        tbody.appendChild(tr);
+      });
+      tableEl.appendChild(tbody);
+    }
+
+    function loadCSVtoTable(csvPath, tableId) {
+      const tableEl = document.getElementById(tableId);
+      // prikaz poruke dok se učitava
+      tableEl.innerHTML = '<thead><tr><th>Učitavanje...</th></tr></thead>';
+      Papa.parse(csvPath, {
+        download: true,
+        header: true,
+        skipEmptyLines: true,
+        complete: function(results) {
+          if (results && results.data && results.data.length > 0) {
+            renderTableFromData(tableEl, results.data);
+          } else {
+            tableEl.innerHTML = '<thead><tr><th>Nema podataka</th></tr></thead>';
+          }
+        },
+        error: function(err) {
+          tableEl.innerHTML = '<thead><tr><th>Greška pri učitavanju CSV fajla</th></tr></thead>';
+          console.error('PapaParse error:', err);
+        }
+      });
+    }
+
+    // učitaj sve četiri tabele (stavi svoje fajlove u assets/rezultati/)
+    loadCSVtoTable('assets/rezultati/muskarci17.csv', 'table-m17');
+    loadCSVtoTable('assets/rezultati/zene17.csv', 'table-z17');
+    loadCSVtoTable('assets/rezultati/muskarci7.csv', 'table-m7');
+    loadCSVtoTable('assets/rezultati/zene7.csv', 'table-z7');
+  </script>
+
+</body>
+</html>
